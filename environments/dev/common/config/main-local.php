@@ -3,10 +3,10 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=fat_cms',
-            'username' => 'root',
-            'password' => '123456',
-            'charset' => 'utf8',
+            'dsn' => env("DB_DSN"),
+            'username' => env("DB_USERNAME"),
+            'password' => env("DB_PASSWORD"),
+            'charset' => env("DB_CHARSET"),
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',

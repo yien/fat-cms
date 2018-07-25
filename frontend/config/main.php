@@ -8,6 +8,9 @@ $params = array_merge(
 
 return [
     'id' => 'FatCMS-frontend',
+    'name' => 'Fat CMS',
+    'language' => 'zh-CN',
+    'timeZone' => 'PRC',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',

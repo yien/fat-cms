@@ -10,6 +10,9 @@ return [
     'id' => 'app-console',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'name' => 'FatCMS Console',
+    'language' => 'zh-CN',
+    'timeZone' => 'PRC',
     'controllerNamespace' => 'console\controllers',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
