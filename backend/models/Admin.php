@@ -173,4 +173,9 @@ class Admin extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+    public static function eventTest()
+    {
+
+    }
 }

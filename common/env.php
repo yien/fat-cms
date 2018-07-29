@@ -2,7 +2,6 @@
 /**
  * Load application environment from .env file
  */
-require __DIR__ . '/helpers.php';
 $dotenv = new \Dotenv\Dotenv(dirname(__DIR__));
 $dotenv->load();
 /**

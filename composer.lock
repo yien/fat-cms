@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90f5523f9871ca989b4bd3fae7cf1ba8",
+    "content-hash": "3cfd03f4173dd2ff5216a5e13ce73b7b",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -907,6 +907,51 @@
                 "environment"
             ],
             "time": "2018-07-01T10:25:50+00:00"
+        },
+        {
+            "name": "yien/yii2-fatcms-core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yien/yii2-fatcms-core.git",
+                "reference": "6b05e5e38205d4f306cfece2508eee56ebe91a96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yien/yii2-fatcms-core/zipball/6b05e5e38205d4f306cfece2508eee56ebe91a96",
+                "reference": "6b05e5e38205d4f306cfece2508eee56ebe91a96",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "fatcms\\core\\": ""
+                },
+                "files": [
+                    "ShortcutFunctions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "zhuzhenyu",
+                    "email": "zhuzhenyu307@163.com"
+                }
+            ],
+            "description": "fatcms core",
+            "keywords": [
+                "fatcms",
+                "fatcms-core",
+                "library",
+                "yii2"
+            ],
+            "time": "2018-07-29T19:05:04+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -4065,7 +4110,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "yien/yii2-fatcms-core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
