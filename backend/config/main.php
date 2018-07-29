@@ -7,20 +7,37 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'FatCMS-backend',
+    'id' => 'Fat CMS-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'name' => 'FatCMS Admin',
+    'name' => 'Fat CMS Admin',
     'language' => 'zh-CN',
     'timeZone' => 'PRC',
     'modules' => [],
     'components' => [
+        // backend adminlte theme
+        'view' => [
+            'theme' => [
+                'basePath' => "@backend/themes/adminlte",
+                'baseUrl' => '@web/themes/adminlte',
+                'pathMap' => [
+                    '@backend/views' => '@backend/themes/adminlte'
+                ],
+            ],
+        ],
+        'assetManager' => [
+            'bundles' => [
+                'dmstr\web\AdminLteAsset' => [
+                    'skin' => 'skin-blue',
+                ],
+            ],
+        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => 'backend\models\Admin',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
@@ -45,6 +62,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '' => 'site/index'
             ],
         ],
 

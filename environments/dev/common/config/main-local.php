@@ -7,6 +7,8 @@ return [
             'username' => env("DB_USERNAME"),
             'password' => env("DB_PASSWORD"),
             'charset' => env("DB_CHARSET"),
+            'tablePrefix' => env("DB_TABLE_PREFIX")
+
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
