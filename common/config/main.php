@@ -8,10 +8,11 @@ return [
     'components' => [
         'formatter' => [
             'dateFormat' => 'yyyy-MM-dd',
+            'locale' => 'zh-CN',
             'datetimeFormat' => 'yyyy-MM-dd HH:mm:ss',
             'decimalSeparator' => ',',
             'thousandSeparator' => ' ',
-            //'currencyCode' => 'CNY',
+            'currencyCode' => 'CNY',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',

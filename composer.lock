@@ -914,12 +914,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yien/yii2-fatcms-core.git",
-                "reference": "6b05e5e38205d4f306cfece2508eee56ebe91a96"
+                "reference": "5a83e148393df2b49941d50918670d93feb9b612"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yien/yii2-fatcms-core/zipball/6b05e5e38205d4f306cfece2508eee56ebe91a96",
-                "reference": "6b05e5e38205d4f306cfece2508eee56ebe91a96",
+                "url": "https://api.github.com/repos/yien/yii2-fatcms-core/zipball/5a83e148393df2b49941d50918670d93feb9b612",
+                "reference": "5a83e148393df2b49941d50918670d93feb9b612",
                 "shasum": ""
             },
             "require": {
@@ -951,7 +951,7 @@
                 "library",
                 "yii2"
             ],
-            "time": "2018-07-29T19:05:04+00:00"
+            "time": "2018-07-30T17:25:32+00:00"
         },
         {
             "name": "yiisoft/yii2",

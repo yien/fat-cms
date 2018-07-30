@@ -40,6 +40,10 @@ return [
             'identityClass' => 'backend\models\Admin',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+            // 登录事件
+            'on afterLogin' => function($event) {
+
+            }
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
