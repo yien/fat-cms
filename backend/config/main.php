@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'name' => 'Fat CMS Admin',
+    'name' => 'FatCMS Admin',
     'language' => 'zh-CN',
     'timeZone' => 'PRC',
     'modules' => [],
@@ -69,7 +69,20 @@ return [
                 '' => 'site/index'
             ],
         ],
-
+        'i18n' => [
+            'translations' => [
+                'yii*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@yii/messages',
+                ],
+                'fat*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'sourceLanguage' => 'en-US',
+                    'basePath' => '@common/messages',
+                ]
+            ]
+        ]
     ],
     'params' => $params,
 ];
