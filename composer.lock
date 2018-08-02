@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3cfd03f4173dd2ff5216a5e13ce73b7b",
+    "content-hash": "11aa8a6bceb1303317e4c3388ae1e211",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -77,7 +77,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -914,12 +914,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yien/yii2-fatcms-core.git",
-                "reference": "5a83e148393df2b49941d50918670d93feb9b612"
+                "reference": "fc6ea06ecdf29ffe279d40d73ecd8cb3bd0e3e8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yien/yii2-fatcms-core/zipball/5a83e148393df2b49941d50918670d93feb9b612",
-                "reference": "5a83e148393df2b49941d50918670d93feb9b612",
+                "url": "https://api.github.com/repos/yien/yii2-fatcms-core/zipball/fc6ea06ecdf29ffe279d40d73ecd8cb3bd0e3e8b",
+                "reference": "fc6ea06ecdf29ffe279d40d73ecd8cb3bd0e3e8b",
                 "shasum": ""
             },
             "require": {
@@ -951,7 +951,47 @@
                 "library",
                 "yii2"
             ],
-            "time": "2018-07-30T17:25:32+00:00"
+            "time": "2018-08-01T18:40:17+00:00"
+        },
+        {
+            "name": "yien/yii2-fatcms-settings",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yien/yii2-fatcms-settings.git",
+                "reference": "6d79ee21f8828e635bc8f512efff798a01650809"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yien/yii2-fatcms-settings/zipball/6d79ee21f8828e635bc8f512efff798a01650809",
+                "reference": "6d79ee21f8828e635bc8f512efff798a01650809",
+                "shasum": ""
+            },
+            "require": {
+                "yien/yii2-fatcms-core": "dev-master"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "fatcms\\settings\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "fatcms",
+                    "email": "zhuzhenyu307@163.com"
+                }
+            ],
+            "description": "fatcms settings",
+            "keywords": [
+                "extension",
+                "yii2"
+            ],
+            "time": "2018-08-02T17:14:37+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -4111,7 +4151,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "yien/yii2-fatcms-core": 20
+        "yien/yii2-fatcms-core": 20,
+        "yien/yii2-fatcms-settings": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
