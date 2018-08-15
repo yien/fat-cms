@@ -14,8 +14,17 @@ return [
     'name' => 'FatCMS Admin',
     'language' => 'zh-CN',
     'timeZone' => 'PRC',
-    'modules' => [],
+    'modules' => [
+        'setting' => [
+            'class' => 'backend\modules\setting\Module',
+        ],
+        'gridview' => [
+            'class' => '\kartik\grid\Module',
+        ]
+    ],
     'components' => [
+
+
         // backend adminlte theme
         'view' => [
             'theme' => [

@@ -44,7 +44,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index'
+                '' => 'site/index',
+                'p/<pageId:[a-zA-Z0-9]+>' => 'page/index'
             ],
         ],
 
