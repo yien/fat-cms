@@ -32,13 +32,13 @@ class m180801_174701_settings extends Migration
 
         $this->createIndex("uk_slug", self::TABLE_SETTING_GROUP, ['slug'], true);
 
+//        Yii::$app->setting->get('product.status')->get();
         /**
          * 配置项
          */
         $this->createTable(self::TABLE_SETTING, [
             'id' => $this->primaryKey(),
             'cate_id' => $this->integer()->defaultValue(0)->comment("分组ID"),
-            'cate_slug' => $this->string()->notNull()->defaultValue("")->comment("分组标识"),
             'type' => $this->string(64)->notNull()->defaultValue("")->comment("类型"),
             'name' => $this->string(64)->notNull()->defaultValue("")->comment("标题"),
             'slug' => $this->string(64)->notNull()->defaultValue("")->comment("标识"),

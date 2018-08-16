@@ -162,5 +162,32 @@ if (! function_exists("get_ip")) {
 
 
 
+if (! function_exists("get_tree")) {
+    /**
+     *
+     * format array
+     * @param $data
+     * @param int $pid
+     * @param int $level
+     * @param string $separator
+     * @param string $path
+     * @return array
+     */
+   function get_tree($data, $pid = 0, $path = 0, $level = 1,  $separator = "|__")
+   {
+       $tree = [];
+       foreach ($data as $value) {
+           if ($value['pid'] == $pid) {
+               $value['level'] = $level;
+               $value['path'] = $path;
+               $value['name'] = str_repeat($separator, $level) . $value['name'];
+               $tree[] = $value;
+               $_path = $path . '-' . $value['id'];
+               $tree = array_merge($tree, get_tree($data, $value['id'], $_path, $level + 1,  $separator));
+           }
+        }
+        return $tree;
+    }
+}
 
 

@@ -4,6 +4,7 @@ $this->title = "配置组";
 $this->params['breadcrumbs'][] = $this->title;
 $columns = [
     [ 'class' => \kartik\grid\SerialColumn::class],
+    'id',
     'name',
     'slug',
     'pid',

@@ -1,18 +1,14 @@
 <?php
-
 namespace backend\modules\setting\controllers;
 
-use Yii;
 use common\models\SettngCategory;
-use yii\web\NotFoundHttpException;
+use common\models\SettngItem;
+use Yii;
 use backend\components\BaseController;
-use backend\modules\setting\search\CategorySearch;
+use backend\modules\setting\search\ItemsSearch;
+use yii\web\NotFoundHttpException;
 
-
-/**
- * Default controller for the `setting` module
- */
-class CategoryController extends BaseController
+class ItemController extends BaseController
 {
     /**
      * Renders the index view for the module
@@ -20,7 +16,7 @@ class CategoryController extends BaseController
      */
     public function actionIndex()
     {
-        $searchModel = new CategorySearch();
+        $searchModel = new ItemsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -29,12 +25,9 @@ class CategoryController extends BaseController
     }
 
 
-    /**
-     * @return string
-     */
     public function actionCreate()
     {
-        $model = new SettngCategory();
+        $model = new SettngItem();
         if ( app()->request->isPost ) {
             if ($model->load(app()->request->post())) {
                 if ($model->save()) {
@@ -47,6 +40,12 @@ class CategoryController extends BaseController
         ]);
     }
 
+
+    /**
+     * @param $id
+     * @return string
+     * @throws NotFoundHttpException
+     */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
@@ -60,23 +59,32 @@ class CategoryController extends BaseController
         return $this->render('update', ['model' => $model]);
     }
 
-    public function actionDelete()
-    {
 
-    }
-
-
-    public function actionView()
-    {
-
-    }
-
+    /**
+     * @param $id
+     * @return null|static
+     * @throws NotFoundHttpException
+     */
     protected function findModel($id)
     {
-        $model = SettngCategory::findOne($id);
+        $model = SettngItem::findOne($id);
         if (!$model) {
-            throw new NotFoundHttpException("Not Found Category");
+            throw new NotFoundHttpException("Not Found Item");
         }
         return $model;
+    }
+
+
+    public function actionTree()
+    {
+        $list = app()->settings->getItems("express");
+        var_dump($list);exit;
+//        $cate = SettngCategory::findOne(9);
+//        $ret = $cate->getItems()->asArray()->all();
+//        var_dump($ret);
+//        exit;
+////        $list = SettngCategory::getCategories();
+////        $res = get_tree($list);
+////        var_dump($res);
     }
 }

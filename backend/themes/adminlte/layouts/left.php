@@ -33,34 +33,34 @@ use yii\helpers\Url;
                         'items' => [
                             ['label' => '配置组', 'icon' => 'circle-o', 'url' => [Url::toRoute('/setting/category')],],
                             ['label' => '配置项', 'icon' => 'circle-o', 'url' => [Url::toRoute('/setting/item')],],
-                            ['label' => '支付方式', 'icon' => 'circle-o', 'url' => [Url::toRoute('/settings/setting')],],
-                            ['label' => '定时任务', 'icon' => 'circle-o', 'url' => [Url::toRoute('/settings/setting')],],
-                            ['label' => '队列服务', 'icon' => 'circle-o', 'url' => [Url::toRoute('/settings/setting')],],
-                            ['label' => '邮件服务', 'icon' => 'circle-o', 'url' => [Url::toRoute('/settings/setting')],],
+//                            ['label' => '支付方式', 'icon' => 'circle-o', 'url' => [Url::toRoute('/settings/setting')],],
+//                            ['label' => '定时任务', 'icon' => 'circle-o', 'url' => [Url::toRoute('/settings/setting')],],
+//                            ['label' => '队列服务', 'icon' => 'circle-o', 'url' => [Url::toRoute('/settings/setting')],],
+//                            ['label' => '邮件服务', 'icon' => 'circle-o', 'url' => [Url::toRoute('/settings/setting')],],
                         ]
                     ],
-                    [
-                        'label' => '广告管理',
-                        'icon' => 'circle-o',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => '渠道管理', 'icon' => 'circle-o', 'url' => ['/gii'],],
-                            ['label' => '广告组管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
-                            ['label' => '广告位管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
-                        ],
-                    ],
+//                    [
+//                        'label' => '广告管理',
+//                        'icon' => 'circle-o',
+//                        'url' => '#',
+//                        'items' => [
+//                            ['label' => '渠道管理', 'icon' => 'circle-o', 'url' => ['/gii'],],
+//                            ['label' => '广告组管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
+//                            ['label' => '广告位管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
+//                        ],
+//                    ],
 
-                    [
-                        'label' => '文章管理',
-                        'icon' => 'circle-o',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => '分类管理', 'icon' => 'circle-o', 'url' => ['/gii'],],
-                            ['label' => '标签管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
-                            ['label' => '附件管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
-                            ['label' => '文章管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
-                        ],
-                    ],
+//                    [
+//                        'label' => '文章管理',
+//                        'icon' => 'circle-o',
+//                        'url' => '#',
+//                        'items' => [
+//                            ['label' => '分类管理', 'icon' => 'circle-o', 'url' => ['/gii'],],
+//                            ['label' => '标签管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
+//                            ['label' => '附件管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
+//                            ['label' => '文章管理', 'icon' => 'circle-o', 'url' => ['/debug'],],
+//                        ],
+//                    ],
 
                     [
                         'label' => '推广管理',

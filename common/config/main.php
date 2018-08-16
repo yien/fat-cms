@@ -7,9 +7,9 @@ return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         // 系统配置
-//        'settings' => [
-//           'class' =>  \fatcms\settings\components\Settings::class,
-//        ],
+        'settings' => [
+           'class' => \common\components\SettingComponent::class
+        ],
 
         'formatter' => [
             'dateFormat' => 'yyyy-MM-dd',

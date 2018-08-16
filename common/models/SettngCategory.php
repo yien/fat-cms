@@ -2,8 +2,8 @@
 
 namespace common\models;
 
-use fatcms\core\helpers\ArrayHelper;
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "fat_setting_category".
@@ -62,12 +62,37 @@ class SettngCategory extends \common\components\BaseActiveRecord
         ];
     }
 
+
+
     /**
-     *
+     * 获取所有的分类
      */
-    public static function getTopCateMap()
+    public static function getCategories()
     {
-        $list = self::find()->where(['pid' => 0])->all();
-        return \yii\helpers\ArrayHelper::map($list, 'id', 'name');
+        $data = self::find()->all();
+        $data = ArrayHelper::toArray($data);
+        return $data;
+
     }
+
+    /**
+     * @return array
+     */
+    public static function getOptions()
+    {
+        $data = self::getCategories();
+        $tree = get_tree($data);
+        $list = ['顶级分组'];
+        foreach ($tree as $value) {
+            $list[$value['id']] = $value['name'];
+        }
+        return $list;
+    }
+
+
+    public function getItems()
+    {
+        return $this->hasMany(SettngItem::class, ['cate_id' => 'id']);
+    }
+
 }
