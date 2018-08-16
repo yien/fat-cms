@@ -6,6 +6,7 @@ use backend\modules\setting\search\CategorySearch;
 use Yii;
 use common\models\SettngCategory;
 use backend\components\BaseController;
+use yii\web\NotFoundHttpException;
 
 /**
  * Default controller for the `setting` module
@@ -45,6 +46,18 @@ class CategoryController extends BaseController
         ]);
     }
 
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+        if ( app()->request->isPost ) {
+            if ($model->load(app()->request->post())) {
+                if ($model->save()) {
+                    app()->session->setFlash("success", "编辑成功");
+                }
+            }
+        }
+        return $this->render('update', ['model' => $model]);
+    }
 
     public function actionDelete()
     {
@@ -57,8 +70,12 @@ class CategoryController extends BaseController
 
     }
 
-    public function findModel()
+    protected function findModel($id)
     {
-
+        $model = SettngCategory::findOne($id);
+        if (!$model) {
+            throw new NotFoundHttpException("Not Found Category");
+        }
+        return $model;
     }
 }

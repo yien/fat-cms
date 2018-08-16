@@ -16,7 +16,6 @@ class CategorySearch extends SettngCategory
     public function search($params)
     {
         $query = parent::find();
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'sort' => [
@@ -29,8 +28,8 @@ class CategorySearch extends SettngCategory
         if (!$this->validate()) {
             return $dataProvider;
         }
-        $query->andFilterWhere(['like', 'name', $this->name, true]);
-        $query->andFilterWhere(['like', 'slug', $this->name, true]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->andFilterWhere(['like', 'slug', $this->slug]);
         return $dataProvider;
     }
 }

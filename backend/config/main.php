@@ -75,8 +75,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index'
-            ],
+                '' => 'site/index',
+                ]
         ],
         'i18n' => [
             'translations' => [

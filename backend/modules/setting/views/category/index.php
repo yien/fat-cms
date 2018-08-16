@@ -4,26 +4,26 @@ $this->title = "配置组";
 $this->params['breadcrumbs'][] = $this->title;
 $columns = [
     [ 'class' => \kartik\grid\SerialColumn::class],
-    'id',
     'name',
     'slug',
     'pid',
-//    'status',
     [
         'attribute' => 'status',
         'class' => \kartik\grid\BooleanColumn::className()
     ],
     ['attribute' => 'created_at', 'format' => ['datetime']],
     ['attribute' => 'updated_at', 'format' => ['datetime']],
+    [
+       'class' => \kartik\grid\ActionColumn::className(),
+        'dropdown' => false,
+        'viewOptions' => [],
+    ]
 ];
 $createButton = \yii\helpers\Html::a('添加配置组', ['create'], ['class' => Yii::$app->params['btnStyle']]);
 
 ?>
 
-
-
-
-
+<?= $this->render('_search', ['searchModel' => $searchModel]); ?>
 <?= GridView::widget(
     [
         'autoXlFormat' => false,
